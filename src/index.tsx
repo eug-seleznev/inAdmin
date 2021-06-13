@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { UserStoreProvider } from './stores/user/hooks';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <UserStoreProvider>
+      <App />
+    </UserStoreProvider> 
   </React.StrictMode>,
   document.getElementById('root')
 );
